@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mams_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mams_db
+      MYSQL_USER: mams_user
+      MYSQL_PASSWORD: mams_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mams_db_data:/var/lib/mysql
+
+volumes:
+  mams_db_data:

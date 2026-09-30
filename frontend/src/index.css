@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-brand-light text-slate-800 font-sans antialiased;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/90 backdrop-blur-md border border-white/20 shadow-xl;
+}
